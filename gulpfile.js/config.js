@@ -5,7 +5,7 @@ var webpack = require('webpack');
 var argv = require('minimist')(process.argv.slice(2));
 
 var src = './src';
-var dest = './build'
+var dest = './public'
 
 module.exports = {
   watch: !!(argv.w),
