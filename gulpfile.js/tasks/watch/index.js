@@ -10,10 +10,13 @@ gulp.task('watch', function() {
   gulp.watch(config.dirs.src + "/js/**", function() {
     gulp.start(['webpack']);
   });
-  gulp.watch(config.dirs.src + "/style/**", function() {
-    gulp.start(['styles']);
+  gulp.watch(config.dirs.src + "/style/pc/**", function() {
+    gulp.start(['css:pc']);
   });
-  gulp.watch('./public/*.html', function() {
+  gulp.watch(config.dirs.src + "/style/sp/**", function() {
+    gulp.start(['css:sp']);
+  });
+  gulp.watch('./public/**/*.html', function() {
     gulp.start(['html']);
   });
 });

@@ -8,15 +8,33 @@ var config = require('../../config')
 var gulpif = require('gulp-if')
 var browserSync = require('browser-sync');
 
-gulp.task('styles', function() {
-  gulp.src(config.cssnext.src)
+gulp.task('css', function() {
+  var runSequence = require('run-sequence');
+  runSequence(['css:pc', 'css:sp']);
+});
+
+gulp.task('css:pc', function() {
+  gulp.src(config.cssnext.src.pc)
     .pipe(plumber({
       errorHandler: notify.onError("Error: <%= error.message %>")
     }))
     .pipe(cssnext({
       compress: true
     }))
-    .pipe(gulp.dest(config.cssnext.dest))
+    .pipe(gulp.dest(config.cssnext.dest.pc))
     .pipe(browserSync.reload({stream: true}))
     ;
-});
+})
+
+gulp.task('css:sp', function() {
+  gulp.src(config.cssnext.src.sp)
+    .pipe(plumber({
+      errorHandler: notify.onError("Error: <%= error.message %>")
+    }))
+    .pipe(cssnext({
+      compress: true
+    }))
+    .pipe(gulp.dest(config.cssnext.dest.sp))
+    .pipe(browserSync.reload({stream: true}))
+    ;
+})

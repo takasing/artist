@@ -14,8 +14,14 @@ module.exports = {
     dest: dest
   },
   cssnext: {
-    src: src + '/style/index.css',
-    dest: dest
+    src: {
+      pc: src + '/style/pc/index.css',
+      sp: src + '/style/sp/index.css'
+    },
+    dest: {
+      pc: dest,
+      sp: dest + '/sp'
+    }
   },
   webpack: {
     entry: src + '/js/app.js',
