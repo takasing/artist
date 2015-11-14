@@ -12,6 +12,8 @@
   position: absolute;
   top: 0;
 
+  display: table;
+
   transform: translateY(0);
   transition: transform .7s cubic-bezier(.825,0,.5,1);
 }
@@ -22,15 +24,36 @@
 
 .p-showcase__section--profile {
   background-color: #56bc8a;
+  color: #FFF;
   z-index: 10;
 }
 
 .p-showcase__section--live {
   background-color: #a77dc2;
+  color: #FFF;
   z-index: 9;
 }
 
 .p-showcase__section--works {
   background-color: #f2992e;
+  color: #FFF;
   z-index: 8;
+}
+
+.p-showcase__content {
+  display: table-cell;
+  padding: 0 44px;
+  vertical-align: middle;
+}
+
+.p-showcase__title {
+  text-align: center;
+  height: 44px;
+  font-size: 32px;
+  letter-spacing: 5px;
+}
+
+.p-showcase__desctiption {
+  margin-top: 32px;
+  vertical-align: middle;
 }
