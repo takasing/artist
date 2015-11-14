@@ -1,5 +1,5 @@
-import Hello from './Hello'
+import Pagination from './DotPagination'
 
-var hello = new Hello('Hi')
-
-hello.say()
+window.addEventListener('DOMContentLoaded', function() {
+  new Pagination();
+})

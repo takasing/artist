@@ -1,5 +1,7 @@
 'use strict'
 
+var webpack = require('webpack');
+
 var argv = require('minimist')(process.argv.slice(2));
 
 var src = './src';
@@ -9,6 +11,10 @@ module.exports = {
   watch: !!(argv.w),
   dirs: {
     src: src,
+    dest: dest
+  },
+  cssnext: {
+    src: src + '/style/index.css',
     dest: dest
   },
   webpack: {
@@ -27,6 +33,11 @@ module.exports = {
           loader: 'babel?presets[]=es2015'
         }
       ]
-    }
+    },
+    plugins: [
+      new webpack.ProvidePlugin({
+        $: 'jquery'
+      })
+    ]
   }
 };
