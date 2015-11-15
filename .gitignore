@@ -1,5 +1,6 @@
 /public/bundle.js
 /public/index.css
 /public/sp/index.css
+/public/image/*
 /node_modules
 /npm-debug.log

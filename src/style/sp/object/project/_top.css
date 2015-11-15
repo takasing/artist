@@ -22,20 +22,25 @@
   transform: translateY(-100%);
 }
 
+.p-showcase__cover {
+  background-color: #000;
+  opacity: 0.7;
+}
+
 .p-showcase__section--profile {
-  background-color: #56bc8a;
+  background: url("/image/profile.jpg") no-repeat center center fixed;
   color: #FFF;
   z-index: 10;
 }
 
 .p-showcase__section--live {
-  background-color: #a77dc2;
+  background: url("/image/live.jpg") no-repeat center center fixed;
   color: #FFF;
   z-index: 9;
 }
 
 .p-showcase__section--works {
-  background-color: #f2992e;
+  background: url("/image/works.jpg") no-repeat center center fixed;
   color: #FFF;
   z-index: 8;
 }
