@@ -51,6 +51,7 @@
   height: 44px;
   font-size: 32px;
   letter-spacing: 5px;
+  font-feature-settings: "liga" 0;
 }
 
 .p-showcase__desctiption {

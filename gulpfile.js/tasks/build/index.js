@@ -3,4 +3,15 @@
 var gulp = require('gulp');
 
 gulp.task('default', ['build', 'watch', 'browser-sync'])
-gulp.task('build', ['webpack', 'css']);
+
+gulp.task('build', ['build:js', 'build:css']);
+
+gulp.task('build:js', function() {
+  var runSequence = require('run-sequence');
+  runSequence(['webpack', 'lint:js']);
+});
+
+gulp.task('build:css', function() {
+  var runSequence = require('run-sequence');
+  runSequence(['css:pc', 'css:sp']);
+});

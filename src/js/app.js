@@ -1,5 +1,7 @@
-import Pagination from './DotPagination'
+"use strict";
 
-window.addEventListener('DOMContentLoaded', function() {
-  new Pagination();
-})
+import DotPagination from "./DotPagination";
+
+window.addEventListener("DOMContentLoaded", function() {
+    var pagination = new DotPagination();
+});

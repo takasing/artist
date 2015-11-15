@@ -8,11 +8,6 @@ var config = require('../../config')
 var gulpif = require('gulp-if')
 var browserSync = require('browser-sync');
 
-gulp.task('css', function() {
-  var runSequence = require('run-sequence');
-  runSequence(['css:pc', 'css:sp']);
-});
-
 gulp.task('css:pc', function() {
   gulp.src(config.cssnext.src.pc)
     .pipe(plumber({
