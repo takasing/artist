@@ -63,3 +63,22 @@
   margin-top: 32px;
   vertical-align: middle;
 }
+
+.p-showcase__arrow {
+  width: 100%;
+  height: 32px;
+  text-align: center;
+  vertical-align: middle;
+
+  z-index: 12;
+}
+
+.p-showcase__arrow--up {
+  position: fixed;
+  top: 0;
+}
+
+.p-showcase__arrow--down {
+  position: fixed;
+  bottom: 0;
+}
