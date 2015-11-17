@@ -45,7 +45,7 @@ module.exports = {
         ]
     },
     image: {
-        src: src + "/image/**/*",
+        src: "src/image/**/*",
         dest: dest + "/image"
     }
 };
